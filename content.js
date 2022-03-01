@@ -1,4 +1,4 @@
 window.onload = function() {
-  document.getElementById('loginModal').style.display = 'none';
-  document.querySelector('.modal-backdrop').style.display = 'none';
+  const height = document.querySelector('.nav .active').offsetTop;
+  document.querySelector('.nav ul').scrollTop = height;
 }
