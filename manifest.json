@@ -1,0 +1,27 @@
+{
+  "name": "cancel dialog",
+  "version": "1.0.0",
+  "description": "cancel a dialog",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "images/close.png",
+      "48": "images/close48.png",
+      "64": "images/close128.png"
+    },
+    "default_title": "cancel dialog",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.zhufengpeixun.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://www.google.com/"
+  ]
+}
